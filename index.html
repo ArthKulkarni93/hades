@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Emberwake</title>
+  <meta name="description" content="Emberwake — a roguelite action dungeon crawler for the browser. The sun is dead. You are what remains.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="game"></canvas>
+
+    <div id="hud" class="hidden">
+      <div class="hud-tl">
+        <div id="hud-realm"></div>
+        <div id="hud-room"></div>
+      </div>
+      <div class="hud-tr"><div id="hud-build"></div></div>
+      <div id="boss-bar" class="hidden">
+        <div class="boss-name"></div>
+        <div class="bar"><div class="lag"></div><div class="fill"></div><div class="mark"></div></div>
+        <div class="boss-epithet"></div>
+      </div>
+      <div class="hud-bl">
+        <div id="hp"><div class="hp-bar"><div class="lag"></div><div class="fill"></div><div class="text"></div></div></div>
+        <div class="pips-row">
+          <div class="pip-group"><span class="pip-label">Dash</span><div id="dash-pips" class="pips"></div></div>
+          <div class="pip-group"><span class="pip-label">Cast</span><div id="cast-pips" class="pips"></div></div>
+          <div class="pip-group defy"><span class="pip-label">Flame</span><div id="defy-pips" class="pips"></div></div>
+        </div>
+      </div>
+      <div class="hud-br">
+        <div id="gold" class="currency"><span class="ic coin"></span><span class="v">0</span></div>
+        <div id="ash" class="currency"><span class="ic ash"></span><span class="v">0</span></div>
+      </div>
+      <div id="fps"></div>
+    </div>
+
+    <div id="toast"></div>
+    <div id="banner" class="banner"></div>
+    <div id="dialogue" class="hidden">
+      <div class="speaker"></div>
+      <div class="text"></div>
+      <div class="hint"></div>
+    </div>
+    <div id="vignette"></div>
+    <div id="overlay" class="hidden"></div>
+    <div id="fade"></div>
+    <div id="crash" class="hidden">
+      <h2>The flame flickered — something broke.</h2>
+      <p>Reload the page to try again. Details:</p>
+      <pre></pre>
+    </div>
+    <noscript><div class="noscript">Emberwake needs JavaScript to run.</div></noscript>
+  </div>
+
+  <script src="js/util.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/touch.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/combat.js"></script>
+  <script src="js/blessings.js"></script>
+  <script src="js/weapons.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/enemies.js"></script>
+  <script src="js/bosses.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
